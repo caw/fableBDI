@@ -1,7 +1,5 @@
-module Utilities
 
 type BdiTerm =
-
     | BdiNumber of float
     | BdiSymbol of string
     | BdiVar of string
@@ -23,9 +21,25 @@ let rename var =
     | _ -> BdiVar("")
 
 
-let x = BdiNumber 3.0
-let y = BdiVar("foo")
+let b = BdiSymbol "sym1"
+let n1 = BdiNumber 3.0
+let n2 = BdiNumber 4.0
 
-let z = rename y
+let v1 = BdiVar("foo")
+let v2 = BdiVar("foo1")
 
-printf "x: %A\ty: %A\tz: %A\n" x y z
+let v3 = rename v2
+
+let unify term1 term2 env = if term1 = term2 then true else false
+
+let makeEnv = Map.empty
+let binding (BdiVar s) env = 
+    printf "s: %s" s
+
+        
+printf "Result: %b\n" (unify b b makeEnv)
+printf "Result: %b\n" (unify v1 v2 makeEnv)
+printf "Result: %b\n" (unify v1 v1 makeEnv)
+printf "Result: %b\n" (unify n1 n2 makeEnv)
+printf "Result: %b\n" (unify n1 n1 makeEnv)
+
