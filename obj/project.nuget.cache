@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6SWmGiSUkMeqkrIJ5aTarsUWW9+iAJaa16hho6xNKIr6e4kfuIt6fQjUteR8rOWEgE1yEIr2TVNsIZ3TDC+wqA==",
+  "success": true,
+  "projectFilePath": "/Users/caw/src/f_sharp/BDI/BDI.fsproj",
+  "expectedPackageFiles": [
+    "/Users/caw/.nuget/packages/fsharp.core/4.7.1/fsharp.core.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
